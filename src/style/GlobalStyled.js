@@ -4,6 +4,7 @@ import reset from "styled-reset";
 export const mainColors = {
   bgColor: "#1d1d1d",
   fontColor: "#fff",
+  pointColor: "crimson",
 };
 
 export const GlobalStyled = createGlobalStyle`
@@ -18,6 +19,11 @@ export const GlobalStyled = createGlobalStyle`
         color: ${mainColors.fontColor};
         letter-spacing: -1px;
         word-break: keep-all;
+    }
+
+    a{
+        text-decoration: none;
+        color:${mainColors.fontColor};
     }
 
 `;
