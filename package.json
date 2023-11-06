@@ -2,7 +2,6 @@
   "name": "movie_app_23_11_06",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://api.themoviedb.org",
   "dependencies": {
     "@tanstack/react-query": "^5.7.2",
     "@testing-library/jest-dom": "^5.17.0",
