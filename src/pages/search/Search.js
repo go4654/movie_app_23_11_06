@@ -84,7 +84,6 @@ export const Search = () => {
       console.log(error);
     }
   };
-  console.log(result);
 
   return (
     <Wrap>
