@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { detail } from "../../api";
 import { IMG_BASE_URL } from "../../constants";
+import { Loading } from "../../components/Loading";
 
 const Wrap = styled.div`
   padding: 150px 15%;
@@ -88,7 +89,7 @@ export const Detail = () => {
   return (
     <>
       {isLoading ? (
-        "loading"
+        <Loading />
       ) : (
         <Wrap>
           <Bg $bgUrl={data?.poster_path} />

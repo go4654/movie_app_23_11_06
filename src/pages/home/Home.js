@@ -3,6 +3,7 @@ import { nowPlaying, popular, topRated } from "../../api";
 import { MainBanner } from "./MainBanner";
 import { ShowMovie } from "./ShowMovie";
 import { Layout } from "../../components/Layout";
+import { Loading } from "../../components/Loading";
 
 export const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -32,7 +33,7 @@ export const Home = () => {
   return (
     <>
       {loading ? (
-        "loading"
+        <Loading />
       ) : (
         <div>
           {nowPlayingData && (
