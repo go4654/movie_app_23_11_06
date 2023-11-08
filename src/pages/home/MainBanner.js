@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import { IMG_BASE_URL } from "../../constants";
 
 const SMainBanner = styled.section`
   height: 90vh;
-  background: url(https://image.tmdb.org/t/p/original/${(props) =>
-      props.$bgUrl})
-    no-repeat center / cover;
+  background: url(${IMG_BASE_URL}/original/${(props) => props.$bgUrl}) no-repeat
+    center / cover;
   padding: 350px 5% 0 5%;
   position: relative;
   @media screen and (max-width: 450px) {
-    padding: 400px 5%;
+    padding: 250px 5%;
+    height: 60vh;
   }
 `;
 

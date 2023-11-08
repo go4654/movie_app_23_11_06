@@ -3,9 +3,12 @@ const fetch = require("node-fetch");
 // const baseUrl = "https://api.themoviedb.org/3/";
 // const now_playing = baseUrl + "movie/now_playing" + "?language=ko-kr";
 
+const baseUrl = "https://api.themoviedb.org/3/";
 const url = (name) => {
-  const baseUrl = "https://api.themoviedb.org/3/";
   return baseUrl + `movie/${name}` + "?language=ko-kr";
+};
+const searchUrl = (name) => {
+  return baseUrl + `search/movie?query=${name}` + "&language=ko-kr";
 };
 
 const options = {
@@ -25,3 +28,8 @@ export const topRated = () =>
 
 export const popular = () =>
   fetch(url("popular"), options).then((res) => res.json());
+
+export const detail = (id) => fetch(url(id), options).then((res) => res.json());
+
+export const search = (keyword) =>
+  fetch(searchUrl(keyword), options).then((res) => res.json());
